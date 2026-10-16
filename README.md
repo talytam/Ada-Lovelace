@@ -60,6 +60,3 @@ Este é um projeto antigo, desenvolvido em **2021**, no início dos meus estudos
 
 Na revisão posterior foram preservados o objetivo e o caráter acadêmico do projeto, com pequenas melhorias técnicas no código e na apresentação.
 
-## Licença
-
-Consulte o arquivo [LICENSE](LICENSE).
