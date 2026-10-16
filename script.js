@@ -1,13 +1,24 @@
-document.getElementById("botaoEnviar").addEventListener("click",validaformulario)
+const formulario = document.getElementById('formulario');
+const nome = document.getElementById('nome');
+const email = document.getElementById('email');
+const mensagem = document.getElementById('mensagem-formulario');
 
-function validaformulario(){
+formulario.addEventListener('submit', (event) => {
+  event.preventDefault();
 
-  if(document.getElementById("nome").value != "" &&
-     document.getElementById("email").value != "" &&
-     document.getElementById("telefone").value != "" ){
+  const nomePreenchido = nome.value.trim();
+  const emailPreenchido = email.value.trim();
 
-    alert("Prontinho! você receberá as novidades por email.")
-  }else{
-    alert("Por favor, preencha os campos nome e email.")
+  if (!nomePreenchido || !emailPreenchido) {
+    mensagem.textContent = 'Por favor, preencha os campos nome e e-mail.';
+    return;
   }
-}
+
+  if (!email.checkValidity()) {
+    mensagem.textContent = 'Digite um endereço de e-mail válido.';
+    return;
+  }
+
+  mensagem.textContent = 'Prontinho! Cadastro simulado com sucesso.';
+  formulario.reset();
+});
