@@ -1,103 +1,201 @@
-body{
-    text-align:center;
-    font-family:open-sans, prata; 
-    background-color:#F2CB05;
-    color:#ffffff;
-    margin:0;
+:root {
+  --cor-fundo: #8c4d08;
+  --cor-destaque: #e0ad18;
+  --cor-clara: #fff7e8;
+  --cor-texto: #ffffff;
+  --cor-superficie: rgba(255, 255, 255, 0.08);
+  --largura-conteudo: 900px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.hero,
+main,
+footer {
+  width: min(90%, var(--largura-conteudo));
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 48px 0 24px;
+  text-align: center;
+}
+
+.projeto {
+  margin: 0 0 8px;
+  color: var(--cor-clara);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0 0 24px;
+  color: var(--cor-clara);
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  color: var(--cor-destaque);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+h3 {
+  color: var(--cor-destaque);
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.05rem;
+}
+
+.principal {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.principal a,
+.mais-mulheres a {
+  color: var(--cor-clara);
+  font-weight: 700;
+}
+
+.principal a {
+  padding: 10px 16px;
+  border: 1px solid var(--cor-destaque);
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.principal a:hover,
+.principal a:focus-visible {
+  background: var(--cor-destaque);
+  color: #3b2308;
+}
+
+article,
+.mais-mulheres,
+.contato {
+  margin-bottom: 32px;
+  padding: clamp(20px, 4vw, 36px);
+  border-radius: 16px;
+  background: var(--cor-superficie);
+}
+
+article section {
+  margin-top: 40px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  margin: 24px auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.mais-mulheres ul {
+  display: flex;
+  gap: 12px 24px;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.contato form {
+  display: grid;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.campo {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font: inherit;
+}
+
+input:focus {
+  border-color: var(--cor-destaque);
+  outline: 3px solid rgba(224, 173, 24, 0.25);
+}
+
+button {
+  width: fit-content;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--cor-destaque);
+  color: #3b2308;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  filter: brightness(1.08);
+}
+
+.mensagem {
+  min-height: 1.6em;
+  margin: 0;
+  font-weight: 700;
+}
+
+footer {
+  padding: 0 0 32px;
+  text-align: center;
+  color: var(--cor-clara);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 32px;
   }
-  
-  h2{
-    color:#F2CB05;
-    font-size:40px;
+
+  article,
+  .mais-mulheres,
+  .contato {
+    padding: 20px;
   }
-  
-  .titulo-verde{
-    color:#D9A404;
+
+  .principal {
+    flex-direction: column;
   }
-  
-  .titulo-vermelho{
-    color:#D9A404;
+
+  .principal a {
+    display: block;
   }
-  
-  .titulo-amarelo {
-    color:#D9A404;
-  }
-  
-  section{
-    width:60%;
-    margin:0 auto;
-  }
-  
-  section section {
-    width:100%;
-  }
-  
-  h1{
-    font-size: 60px;
-    font-weight: 300;
-    color:#F2E6D0
-  }
-  
-  h3{
-    font-size:22px;
-    font-style: italic;
-  }
-  
-  p{
-    line-height: 1.5;
-    font-size: 20px;
-  }
-  
-  img{
-    width: 100%;
-  }
-  
-  ul{
-    list-style-type:none;
-  }
-  
-  ul{
-    list-style-type: none;
-    line-height:2;
-    padding-left:0%;
-  }
-  
-  a{
-    text-decoration: none;
-    color:#D9A404;
-    font-weight: 700;
-  }
-  
-  .principal{
-    background:#D9A404;
-    height: 40px;
-    max-width:60%;
-    margin:0 auto;
-  }
-  
-  .principal a{
-    color: #fff;
-    text-decoration: underline;
-    font-weight: normal;
-  }
-  
-  .principal li{
-    display:inline-block;
-    line-height:2.5;
-    margin: 0 89px;
-  }
-  
-  body{
-    text-align:center;
-    font-family:open-sans, prata; 
-    background-color:#A65D03;
-    color:#ffffff;
-    margin: 0px 0px 30px 0px;
-  }
-  
-  button{
-   background: #D9A404;
-   border: 1px solid transparent;
-   padding: 2px 20px;
-   border-radius: 3px;
-  }
+}
