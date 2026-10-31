@@ -2,7 +2,7 @@
 
 # Ada Lovelace
 
-### Projeto acadêmico sobre uma das figuras mais importantes da história da computação.
+### Projeto de aprendizagem sobre uma das pioneiras da história da computação.
 
 ![Ano](https://img.shields.io/badge/projeto-2021-7B4B12?style=for-the-badge)
 ![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -58,5 +58,5 @@ Não é necessário instalar dependências.
 
 Este é um projeto antigo, desenvolvido em **2021**, no início dos meus estudos em tecnologia. Ele permanece público como parte do histórico da minha evolução.
 
-Na revisão posterior foram preservados o objetivo e o caráter acadêmico do projeto, com pequenas melhorias técnicas no código e na apresentação.
+Na revisão posterior foram preservados o objetivo e o caráter educacional do projeto, com pequenas melhorias técnicas no código e na apresentação.
 
